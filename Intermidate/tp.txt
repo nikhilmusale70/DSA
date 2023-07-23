@@ -1,0 +1,27 @@
+vector<int> Solution::plusOne(vector<int> &a)
+{
+int n=a.size();
+vector<int>res;
+if(n==0)
+{
+res.push_back(1);
+return res;
+}
+int i=0;
+while(i<n && a[i]==0)
+i+=1;
+if(i==n)
+{
+res.push_back(1);
+return res;
+}
+int k=i,carry=0;
+for(i=n-1;i>=k;i--) {
+int sum=a[i]+carry;
+if(i==(n-1)) sum+=1;
+res.push_back(sum%10);
+carry=sum/10;
+}
+
+if(carry) res.push_back(carry); reverse(res.begin(),res.end()); return res;
+}

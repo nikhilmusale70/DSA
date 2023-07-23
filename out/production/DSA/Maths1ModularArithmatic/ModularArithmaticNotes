@@ -1,0 +1,39 @@
+//For calculating power of number using recursion in O(N)
+base cond: if n == 0 return 1
+A-Number
+n-power
+recursion code: int powVar = pow(A, n/2);
+                int temp = powVar * powVar;
+
+                if(n&1==0) //even
+                    return powVar
+                else //odd
+                    return powvar*A;
+
+//for calculating modulus of power function
+A-number
+B-power
+C-modulus
+public static int newPow(int A, int B, int C){
+        //base case
+        if(A == 0){
+            return 0;
+        }
+        if(B == 0){
+            return 1;
+        }
+
+        long temp;
+        //if B is even
+        if(B % 2 == 0){
+            temp = newPow(A, B/2, C);
+            temp = (temp * temp) % C;
+        }
+
+        //if B is odd
+        else{
+            temp = A % C;
+            temp = (temp * newPow(A, B - 1, C) % C) % C;
+        }
+        return (int)((temp + C) % C);
+    }

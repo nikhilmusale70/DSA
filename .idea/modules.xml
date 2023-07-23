@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DSA.iml" filepath="$PROJECT_DIR$/DSA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Intermidate/Intermidate.iml" filepath="$PROJECT_DIR$/Intermidate/Intermidate.iml" />
     </modules>
   </component>
 </project>
