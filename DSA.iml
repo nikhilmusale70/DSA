@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Advanced/Advance1-2" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Advanced/Advance3" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Advanced/Advance4" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/LeetCode" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="corretto-1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
