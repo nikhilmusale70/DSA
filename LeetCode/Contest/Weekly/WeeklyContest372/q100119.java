@@ -1,4 +1,4 @@
-package WeeklyContest372;
+package Contest.Weekly.WeeklyContest372;
 
 public class q100119 {
     public static void main(String[] args) {

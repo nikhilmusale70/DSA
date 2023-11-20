@@ -1,6 +1,4 @@
-package WeeklyContest372;
-
-import java.security.spec.RSAOtherPrimeInfo;
+package Contest.Weekly.WeeklyContest372;
 
 public class q100122 {
     public static void main(String[] args) {
