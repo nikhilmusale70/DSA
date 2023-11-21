@@ -1,4 +1,4 @@
-package DailyChallenge;
+package DailyChallenge.Nov23;
 
 import java.util.Arrays;
 

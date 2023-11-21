@@ -1,4 +1,4 @@
-package DailyChallenge;
+package DailyChallenge.Nov23;
 
 public class Nov20_2391 {
     public static void main(String[] args) {
