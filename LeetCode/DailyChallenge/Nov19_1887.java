@@ -1,3 +1,5 @@
+package DailyChallenge;
+
 import java.util.Arrays;
 
 public class Nov19_1887 {

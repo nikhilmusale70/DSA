@@ -1,4 +1,4 @@
-import java.util.Arrays;
+package DailyChallenge;
 
 public class Nov20_2391 {
     public static void main(String[] args) {
