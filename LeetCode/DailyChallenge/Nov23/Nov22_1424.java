@@ -11,7 +11,6 @@ public class Nov22_1424 {
         List<List<Integer>> nums = List.of(List.of(14,12,19,16,9),List.of(13,14,15,8,11),List.of(11,13,1));
         System.out.println(Arrays.toString(obj.findDiagonalOrder(nums)));
     }
-
     public int[] findDiagonalOrder(List<List<Integer>> nums) {
         HashMap<Integer, List<Integer>> hm = new HashMap<>();
         fillMap(nums, hm);
@@ -25,7 +24,6 @@ public class Nov22_1424 {
         }
         return arr.stream().mapToInt(Integer::intValue).toArray();
     }
-
     void fillMap(List<List<Integer>> nums, HashMap<Integer, List<Integer>> hm){
         for(int i=0; i<nums.size(); i++){
             for(int j=0; j<nums.get(i).size(); j++){
