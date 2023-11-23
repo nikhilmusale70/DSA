@@ -22,7 +22,6 @@ public class Nov23_1630 {
         }
         return ans;
     }
-
     boolean checkIfSubStringPossible(int[] arr){
         Arrays.sort(arr);
         int commonDiff = arr[1] - arr[0];
