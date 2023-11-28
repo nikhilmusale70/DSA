@@ -6,7 +6,6 @@ public class Nov28_2147 {
         String str = "SSPPSPS";
         System.out.println(obj.numberOfWays(str));
     }
-
         public int numberOfWays(String corridor) {
             // Store 1000000007 in a variable for convenience
             final int MOD = 1_000_000_007;
