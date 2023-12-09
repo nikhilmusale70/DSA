@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Dec9_94 {
-    static class TreeNode {
+    class TreeNode {
         int val;
-        Dec8_606.TreeNode left;
-        Dec8_606.TreeNode right;
+        TreeNode left;
+        TreeNode right;
         TreeNode() {}
         TreeNode(int val) { this.val = val; }
 
