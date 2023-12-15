@@ -25,6 +25,7 @@ public class Dec15_1436 {
         for(List<String>path: paths){
             if(!hs.contains(path.get(1))){
                 destination = path.get(1);
+                break;
             }
         }
         return destination;
