@@ -1,4 +1,4 @@
-package Creational;
+package Creational.Singleton;
 
 public class Singleton {
     class Example{

@@ -3,9 +3,7 @@ package Creational.Builder;
 public class Builder {
     private String car;
     private String carColor;
-    private Builder(){
-
-    }
+    private Builder(){}
     public static BuilderBuilder builder(){
         return new BuilderBuilder();
     }

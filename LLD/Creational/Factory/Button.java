@@ -8,4 +8,12 @@ public class Button {
         this.size = size;
         this.type = type;
     }
+
+    public int getSize() {
+        return size;
+    }
+
+    public String getType() {
+        return type;
+    }
 }
