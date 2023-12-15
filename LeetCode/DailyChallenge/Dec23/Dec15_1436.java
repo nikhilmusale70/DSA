@@ -19,11 +19,12 @@ public class Dec15_1436 {
     public String destCity(List<List<String>> paths) {
         String destination = null;
         HashSet<String> hs = new HashSet<>();
-        for(List<String> path : paths){
+        for(List<String> path: paths){
             hs.add(path.get(0));
+        }
+        for(List<String>path: paths){
             if(!hs.contains(path.get(1))){
                 destination = path.get(1);
-                break;
             }
         }
         return destination;
