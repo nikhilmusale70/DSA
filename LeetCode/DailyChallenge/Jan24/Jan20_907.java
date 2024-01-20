@@ -17,14 +17,9 @@ public class Jan20_907 {
             int left = i-1;
             int right = i+1;
 
-            if(i>=0){
-                //go only right
-                rightCount = goRightAndFindContri(arr, right, arr[i]);
-            }
-            if(i<arr.length){
-                //go only left
-                leftCount = goLeftAndFindContri(arr, left, arr[i]);
-            }
+            rightCount = goRightAndFindContri(arr, right, arr[i]);
+            leftCount = goLeftAndFindContri(arr, left, arr[i]);
+
             ans += ((((leftCount+1)*(rightCount+1))%mod) * arr[i])%mod;
             ans %= mod;
         }
@@ -46,4 +41,5 @@ public class Jan20_907 {
         }
         return count;
     }
+
 }
