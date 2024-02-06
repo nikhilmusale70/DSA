@@ -9,31 +9,18 @@ public class Feb6_49 {
         System.out.println(obj.groupAnagrams(strs));
     }
     public List<List<String>> groupAnagrams(String[] strs) {
-        HashMap<List<Integer>, ArrayList<String>> hm = new HashMap<>();
-
-        for(String str: strs){
-            List<Integer> freq = freqArr(str);
-            if(!hm.containsKey(freq)){
-                hm.put(freq, new ArrayList<>());
+        HashMap<String, List<String>> map = new HashMap<>();
+        for (String s : strs) {
+            char[] count = new char[26];
+            for (char ch: s.toCharArray()) {
+                count[ch - 'a']++;
             }
-            ArrayList<String> ar = hm.get(freq);
-            ar.add(str);
-
-            hm.put(freq, ar);
+            String str = new String(count);
+            if (!map.containsKey(str)) {
+                map.put(str, new ArrayList<>());
+            }
+            map.get(str).add(s);
         }
-
-        List<List<String>> ans = new ArrayList<>();
-        for(Map.Entry<List<Integer>, ArrayList<String>> entry: hm.entrySet()){
-            ans.add(entry.getValue());
-        }
-        return ans;
-    }
-    List<Integer> freqArr (String str){
-        List<Integer> freqList = new ArrayList<>(Arrays.asList(new Integer[26]));
-        Collections.fill(freqList, 0);
-        for(char ch: str.toCharArray()){
-            freqList.set(ch-'a', freqList.get(ch-'a')+1);
-        }
-        return freqList;
+        return new ArrayList<>(map.values());
     }
 }
