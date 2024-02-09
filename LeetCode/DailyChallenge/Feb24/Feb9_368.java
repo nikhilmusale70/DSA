@@ -29,7 +29,6 @@ public class Feb9_368 {
                 }
             }
         }
-
         List<Integer> result = new ArrayList<>();
         int num = nums[maxIndex];
         for (int i = maxIndex; i >= 0; i--) {
