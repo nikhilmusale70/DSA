@@ -19,11 +19,12 @@ public class Feb8_279 {
     public int solve(int n) {
         if(n == 0) return 0;
         if(n < 0) return Integer.MAX_VALUE;
-        if(memo[n] != -1) return memo[n];
+//        if(memo[n] != -1) return memo[n];
         int ans = Integer.MAX_VALUE;
         for(int i=1;i*i<=n;i++) {
             ans = Math.min(ans,1 + solve(n-(i*i)));
         }
-        return memo[n] = ans;
+        return ans;
+//        return memo[n] = ans;
     }
 }
