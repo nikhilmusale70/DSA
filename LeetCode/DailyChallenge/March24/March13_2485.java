@@ -15,7 +15,7 @@ public class March13_2485 {
         else return -1;
     }
 
-
+//Alternate method
 //    public int pivotInteger(int n) {
 //        if (n == 1) return 1;
 //
