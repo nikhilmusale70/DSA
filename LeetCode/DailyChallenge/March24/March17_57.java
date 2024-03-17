@@ -13,44 +13,54 @@ public class March17_57 {
     }
 
     public int[][] insert(int[][] intervals, int[] newInterval) {
+        // Initialize a list to store merged intervals
         List<int[]> mergedIntervals = new ArrayList<>();
-        int newStart = newInterval[0];
-        int newEnd = newInterval[1];
+
+        // Extract the start and end values of the new interval
+        int newStart = newInterval[0], newEnd = newInterval[1];
+        // Initialize a flag to track whether the new interval has been inserted
         boolean inserted = false;
 
-        for (int[] interval : intervals) {
-            int currentStart = interval[0];
-            int currentEnd = interval[1];
+        // Iterate through each interval in the input array
+        for (int[] currentInterval : intervals) {
+            // Extract the start and end values of the current interval
+            int currentStart = currentInterval[0], currentEnd = currentInterval[1];
 
-            // If the current interval ends before the new interval starts,
-            // or if the new interval has been inserted already, add the current interval to the result.
+            // If the end of the current interval is before the start of the new interval,
+            // or if the new interval has been inserted already, add the current interval
+            // to the list of merged intervals
             if (currentEnd < newStart || inserted) {
-                mergedIntervals.add(interval);
+                mergedIntervals.add(new int[]{currentStart, currentEnd});
                 continue;
             }
 
-            // Merge intervals if there is overlap
+            // Update the start of the new interval to be the minimum of its current start
+            // and the start of the current interval
             newStart = Math.min(newStart, currentStart);
+
+            // If the end of the new interval is before the start of the current interval,
+            // add the new interval followed by the current interval to the list of merged intervals
             if (newEnd < currentStart) {
-                // If there's a gap between the new interval and the current interval, add the new interval
                 mergedIntervals.add(new int[]{newStart, newEnd});
-                mergedIntervals.add(interval);
+                mergedIntervals.add(new int[]{currentStart, currentEnd});
                 inserted = true;
-            } else if (newEnd <= currentEnd) {
-                // If the new interval is fully contained within the current interval
-                // or if it overlaps with the current interval, merge them
+                continue;
+            }
+
+            // If the end of the new interval is before or equal to the end of the current interval,
+            // update the end of the new interval to be the end of the current interval
+            if (newEnd <= currentEnd) {
                 mergedIntervals.add(new int[]{newStart, currentEnd});
                 inserted = true;
             }
         }
 
-        // If the new interval hasn't been inserted yet, add it to the end
+        // If the new interval hasn't been inserted yet, add it to the list of merged intervals
         if (!inserted) {
-            mergedIntervals.add(newInterval);
+            mergedIntervals.add(new int[]{newStart, newEnd});
         }
 
-        // Convert List<int[]> to int[][]
+        // Convert the list of merged intervals to a 2D array and return it
         return mergedIntervals.toArray(new int[mergedIntervals.size()][]);
     }
-
 }
