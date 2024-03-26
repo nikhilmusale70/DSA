@@ -1,5 +1,8 @@
 package DailyChallenge.March24;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class March25_442{
 	public List<Integer> findDuplicates(int[] nums) {
 		List<Integer> result = new ArrayList<>();
