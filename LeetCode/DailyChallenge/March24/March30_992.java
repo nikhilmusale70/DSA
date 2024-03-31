@@ -10,7 +10,9 @@ public class March30_992 {
         System.out.println(obj.subarraysWithKDistinct(nums, k));
     }
     public int subarraysWithKDistinct(int[] nums, int k) {
-        return slidingWindowAtMost(nums, k) - slidingWindowAtMost(nums, k - 1);
+        int one = slidingWindowAtMost(nums, k);
+        int two = slidingWindowAtMost(nums, k - 1);
+        return  one- two ;
     }
 
     public int slidingWindowAtMost(int[] nums, int k){
