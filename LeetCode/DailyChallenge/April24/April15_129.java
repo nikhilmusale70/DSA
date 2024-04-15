@@ -8,6 +8,8 @@ public class April15_129 {
     int dfs(TreeNode root, int numTillNow){
         if(root==null) return 0;
         numTillNow = numTillNow * 10 + root.val;
+
+        // Check if the current node is a leaf node
         if(root.left == null && root.right == null){
             return numTillNow;
         }
