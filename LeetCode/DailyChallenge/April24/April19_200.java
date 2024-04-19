@@ -8,7 +8,6 @@ public class April19_200 {
                 {'1','1','0','0','0'},
                 {'0','0','0','0','0'}};
         April19_200 obj = new April19_200();
-
         System.out.println(obj.numIslands(grid));
     }
 
