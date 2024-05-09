@@ -9,7 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/LeetCode" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/LLD" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="corretto-1.8" jdkType="JavaSDK" />
+    <orderEntry type="jdk" jdkName="openjdk-22" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
