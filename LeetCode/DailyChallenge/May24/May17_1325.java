@@ -37,7 +37,6 @@ public class May17_1325 {
         obj.printTree(obj.removeLeafNodes(root, 2));
     }
 
-
     public TreeNode createBinaryTree(Integer[] array, int index) {
         TreeNode root = null;
 
