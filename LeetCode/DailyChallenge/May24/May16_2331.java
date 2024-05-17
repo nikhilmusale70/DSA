@@ -14,6 +14,7 @@ public class May16_2331 {
         boolean left = evaluateTree(root.left);
         boolean right = evaluateTree(root.right);
 
+
         return root.val==3?(left&&right) : (left||right);
     }
 
