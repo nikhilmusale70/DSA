@@ -10,21 +10,28 @@ public class June23_995 {
         System.out.println(obj.minKBitFlips(nums, k));
     }
     public int minKBitFlips(int[] nums, int k) {
-        int ans = 0;
-        int i;
-        for(i=0; i<=nums.length-k; i++){
-            if(nums[i]==0){
-                int counter=0;
-                while (counter<k){
-                    nums[i+counter] = nums[i+counter]==1?0:1;
-                    counter++;
+        boolean[] flipped = new boolean[nums.length];
+        int flipsInCurrWindow = 0;
+        int flips = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            // Check if the window has moved past k elements
+            if (i >= k) {
+                if (flipped[i - k]) {
+                    flipsInCurrWindow--;
                 }
-                ans++;
+            }
+            // Determine if the current bit needs to be flipped
+            if (flipsInCurrWindow % 2 == nums[i]) {
+                // Check if there are enough elements remaining to flip
+                if (i + k > nums.length) {
+                    return -1;
+                }
+                flipsInCurrWindow++;
+                flipped[i] = true;
+                flips++;
             }
         }
-        for(;i<nums.length; i++){
-            if (nums[i]==0) return -1;
-        }
-        return ans;
+        return flips;
     }
 }
