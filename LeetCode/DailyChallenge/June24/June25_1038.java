@@ -3,8 +3,6 @@ package DailyChallenge.June24;
 import java.util.*;
 
 public class June25_1038 {
-
-
     public static void main(String[] args) {
         June25_1038 obj = new June25_1038();
         Integer[] arr = {4,1,6,0,2,5,7,null,null,null,3,null,null,null,8};
